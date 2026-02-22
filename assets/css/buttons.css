@@ -1,0 +1,51 @@
+button {
+    background-color: #ff4500;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    background-color: #ff5714;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+form button {
+    margin-top: 16px;
+}
+
+.comment-form button {
+    margin-top: 8px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #818384;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: #343536;
+    color: #ea0027;
+}
+
+.icon-btn svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
