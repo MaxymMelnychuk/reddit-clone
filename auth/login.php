@@ -17,11 +17,8 @@ if (!isset($_SESSION['csrf_token'])) {
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body class="auth-page">
-    <h1>Login</h1>
-    <?php if (isset($_SESSION['auth_error'])): ?>
-    <p class="error"><?= htmlspecialchars($_SESSION['auth_error']) ?></p>
-    <?php unset($_SESSION['auth_error']); endif; ?>
     <form action="process.php" method="post">
+        <h1>Login</h1>
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
         <input type="hidden" name="action" value="login">
         <label for="username">Username</label>
@@ -29,7 +26,10 @@ if (!isset($_SESSION['csrf_token'])) {
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required autocomplete="current-password">
         <button type="submit">Sign in</button>
+        <p><a href="register.php">Create an account</a></p>
+        <?php if (isset($_SESSION['auth_error'])): ?>
+    <p class="error"><?= htmlspecialchars($_SESSION['auth_error']) ?></p>
+    <?php unset($_SESSION['auth_error']); endif; ?>
     </form>
-    <p><a href="register.php">Create an account</a></p>
 </body>
 </html>

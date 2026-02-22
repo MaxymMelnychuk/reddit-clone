@@ -26,8 +26,11 @@ nav {
     gap: 16px;
 }
 
-nav a {
+nav .new_discussion {
+    background-color:  #b14923;;
     color: #d7dadc;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
     font-size: 14px;
     transition: color 0.2s;
 }
