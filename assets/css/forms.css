@@ -1,0 +1,48 @@
+main form {
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    color: #d7dadc;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #272729;
+    border: 1px solid #343536;
+    border-radius: 4px;
+    color: #d7dadc;
+    font-size: 14px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #818384;
+    background-color: #2d2d2e;
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="password"]::placeholder,
+form textarea::placeholder {
+    color: #818384;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
