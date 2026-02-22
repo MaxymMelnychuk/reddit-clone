@@ -1,0 +1,51 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.discussion-list li {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.comment-list li {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.discussion {
+    animation: slideUp 0.3s ease-out;
+}
+
+.comment-form {
+    animation: slideUp 0.3s ease-out;
+}
+
+button {
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.icon-btn {
+    transition: transform 0.1s;
+}
+
+.icon-btn:active {
+    transform: scale(0.9);
+}
