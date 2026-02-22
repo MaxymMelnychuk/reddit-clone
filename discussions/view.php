@@ -45,7 +45,7 @@ $isAdmin = ($_SESSION['role'] ?? '') === 'ADMIN';
     <header>
         <h1><a href="../index.php">Discussions</a></h1>
         <nav>
-            <a href="add.php">New discussion</a>
+            <a class="new_discussion" href="add.php">+ New discussion</a>
             <span><?= htmlspecialchars($_SESSION['username']) ?></span>
             <a href="../auth/logout.php">Logout</a>
         </nav>
@@ -62,7 +62,7 @@ $isAdmin = ($_SESSION['role'] ?? '') === 'ADMIN';
                 </form>
                 <?php endif; ?>
             </div>
-            <p class="meta">by <?= htmlspecialchars($discussion['username']) ?> - <?= htmlspecialchars(date('m/d/Y H:i', strtotime($discussion['created_at']))) ?></p>
+            <p class="meta">by <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M12 22.01C17.5228 22.01 22 17.5329 22 12.01C22 6.48716 17.5228 2.01001 12 2.01001C6.47715 2.01001 2 6.48716 2 12.01C2 17.5329 6.47715 22.01 12 22.01Z" fill="#6f7985"></path> <path d="M12 6.93994C9.93 6.93994 8.25 8.61994 8.25 10.6899C8.25 12.7199 9.84 14.3699 11.95 14.4299C11.98 14.4299 12.02 14.4299 12.04 14.4299C12.06 14.4299 12.09 14.4299 12.11 14.4299C12.12 14.4299 12.13 14.4299 12.13 14.4299C14.15 14.3599 15.74 12.7199 15.75 10.6899C15.75 8.61994 14.07 6.93994 12 6.93994Z" fill="#6f7985"></path> <path d="M18.7807 19.36C17.0007 21 14.6207 22.01 12.0007 22.01C9.3807 22.01 7.0007 21 5.2207 19.36C5.4607 18.45 6.1107 17.62 7.0607 16.98C9.7907 15.16 14.2307 15.16 16.9407 16.98C17.9007 17.62 18.5407 18.45 18.7807 19.36Z" fill="#6f7985"></path> </g></svg> <?= htmlspecialchars($discussion['username']) ?> - <?= htmlspecialchars(date('m/d/Y H:i', strtotime($discussion['created_at']))) ?></p>
             <div class="content"><?= nl2br(htmlspecialchars($discussion['content'])) ?></div>
         </article>
         <section class="comments">
@@ -79,7 +79,9 @@ $isAdmin = ($_SESSION['role'] ?? '') === 'ADMIN';
             <ul class="comment-list">
                 <?php foreach ($comments as $c): ?>
                 <li>
+                    
                     <div class="comment-header">
+                    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M12 22.01C17.5228 22.01 22 17.5329 22 12.01C22 6.48716 17.5228 2.01001 12 2.01001C6.47715 2.01001 2 6.48716 2 12.01C2 17.5329 6.47715 22.01 12 22.01Z" fill="#6f7985"></path> <path d="M12 6.93994C9.93 6.93994 8.25 8.61994 8.25 10.6899C8.25 12.7199 9.84 14.3699 11.95 14.4299C11.98 14.4299 12.02 14.4299 12.04 14.4299C12.06 14.4299 12.09 14.4299 12.11 14.4299C12.12 14.4299 12.13 14.4299 12.13 14.4299C14.15 14.3599 15.74 12.7199 15.75 10.6899C15.75 8.61994 14.07 6.93994 12 6.93994Z" fill="#6f7985"></path> <path d="M18.7807 19.36C17.0007 21 14.6207 22.01 12.0007 22.01C9.3807 22.01 7.0007 21 5.2207 19.36C5.4607 18.45 6.1107 17.62 7.0607 16.98C9.7907 15.16 14.2307 15.16 16.9407 16.98C17.9007 17.62 18.5407 18.45 18.7807 19.36Z" fill="#6f7985"></path> </g></svg>
                         <strong><?= htmlspecialchars($c['username']) ?></strong>
                         <span class="meta"><?= htmlspecialchars(date('m/d/Y H:i', strtotime($c['created_at']))) ?></span>
                         <?php if ($isAdmin): ?>
