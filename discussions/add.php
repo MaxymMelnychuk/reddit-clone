@@ -14,7 +14,7 @@ if (!isset($_SESSION['csrf_discussion'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New discussion</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
     <header>

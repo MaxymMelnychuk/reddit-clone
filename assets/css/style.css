@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1a1a2e;
+    color: #eaeaea;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+header h1 a {
+    color: #ff6b35;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: #64b5f6;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.discussion-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.discussion-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #16213e;
+    border-radius: 8px;
+}
+
+.discussion-list li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.discussion-list li a:hover {
+    color: #ff6b35;
+}
+
+.discussion-list .meta {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.discussion {
+    background: #16213e;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.discussion h2 {
+    margin-top: 0;
+    color: #ff6b35;
+}
+
+.discussion .meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.discussion .content {
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.comments h3 {
+    margin-bottom: 15px;
+    color: #64b5f6;
+}
+
+.comment-form {
+    margin-bottom: 25px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #0f0f1a;
+    color: #eaeaea;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.comment-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background: #e55a2b;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #0f0f1a;
+    border-radius: 6px;
+}
+
+.comment-list li strong {
+    color: #64b5f6;
+}
+
+.comment-list li .meta {
+    color: #666;
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+
+.comment-list li p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+}
+
+.discussion-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discussion-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discussion-header h2 {
+    margin: 0;
+}
+
+.admin-action {
+    display: inline;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.comment-header .admin-actions {
+    margin-left: auto;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #888;
+}
+
+.icon-btn:hover {
+    color: #f44336;
+}
+
+.icon-btn svg {
+    display: block;
+}
+
+.hidden-content {
+    color: #888;
+    font-style: italic;
+}
+
+.no-comments {
+    color: #666;
+    font-style: italic;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #0f0f1a;
+    color: #eaeaea;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e55a2b;
+}
+
+.error {
+    color: #f44336;
+    padding: 10px;
+    background: rgba(244, 67, 54, 0.1);
+    border-radius: 6px;
+}
+
+main a {
+    color: #64b5f6;
+}
+
+main a:hover {
+    text-decoration: underline;
+}

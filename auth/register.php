@@ -14,12 +14,12 @@ if (!isset($_SESSION['csrf_token'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body>
+<body class="auth-page">
     <h1>Register</h1>
     <?php if (isset($_SESSION['auth_error'])): ?>
-    <p><?= htmlspecialchars($_SESSION['auth_error']) ?></p>
+    <p class="error"><?= htmlspecialchars($_SESSION['auth_error']) ?></p>
     <?php unset($_SESSION['auth_error']); endif; ?>
     <form action="process.php" method="post">
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
