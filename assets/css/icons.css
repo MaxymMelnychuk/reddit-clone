@@ -1,0 +1,19 @@
+.icon-btn svg {
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.admin-action {
+    display: inline-flex;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.comment-header .admin-actions {
+    margin-left: auto;
+}
